@@ -1,5 +1,6 @@
 {% extends 'all-news/base.html' %}
 {% load bootstrap3 %}
+{% load staticfiles %}
 {% block content %}
 {{block.super}}
 <div class="container">
@@ -37,3 +38,6 @@
 
 {% endblock %}
 
+{% block scripts %} {{block.super}}
+  <script type="text/javascript" src="{%static 'js/newsletter.js'%}"></script>
+{% endblock %}
